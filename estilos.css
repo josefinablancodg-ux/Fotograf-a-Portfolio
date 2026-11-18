@@ -25,7 +25,7 @@ body {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     background-color: #120117;
-    background-image: url("img/FONDO.jpg");
+    background-image: url("FONDO.jpg");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: 100% auto;
@@ -94,7 +94,7 @@ a {
     height: 416px;
     margin: 0 auto;
     border-radius: 0 0 243px 0;
-    background-image: url("img/nav.jpg");
+    background-image: url("nav.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -236,15 +236,15 @@ a {
 }
 
 #seleccionados .conciertos {
-    background-image: url("img/01-concierto.jpg");
+    background-image: url("01-concierto.jpg");
 }
 
 #seleccionados .deportes {
-    background-image: url("img/02-deporte.jpg");
+    background-image: url("02-deporte.jpg");
 }
 
 #seleccionados .ambiente {
-    background-image: url("img/03-ambiente.jpg");
+    background-image: url("03-ambiente.jpg");
 }
 
 #seleccionados .info {
@@ -327,7 +327,7 @@ a {
     width: 52%;
     height: 300px;
     border-radius: 20px;
-    background-image: url("img/sobre-mi.png");
+    background-image: url("sobre-mi.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -384,27 +384,27 @@ a {
 /* IMAGENES DE CONCIERTOS */
 
 .concierto-uno {
-    background-image: url("img/carrusel-concierto-1.jpg");
+    background-image: url("carrusel-concierto-1.jpg");
 }
 
 .concierto-dos {
-    background-image: url("img/carrusel-concierto-2.jpg");
+    background-image: url("carrusel-concierto-2.jpg");
 }
 
 .concierto-tres {
-    background-image: url("img/carrusel-concierto-3.jpg");
+    background-image: url("carrusel-concierto-3.jpg");
 }
 
 .concierto-cuatro {
-    background-image: url("img/carrusel-concierto-4.jpg");
+    background-image: url("carrusel-concierto-4.jpg");
 }
 
 .concierto-cinco {
-    background-image: url("img/carrusel-concierto-5.jpg");
+    background-image: url("carrusel-concierto-5.jpg");
 }
 
 .concierto-seis {
-    background-image: url("img/carrusel-concierto-6.jpg");
+    background-image: url("carrusel-concierto-6.jpg");
 }
 
 
@@ -443,27 +443,27 @@ a {
 /* IMAGENES DE DEPORTES */
 
 .deporte-uno {
-    background-image: url("img/carrusel-deporte-1.jpg");
+    background-image: url("carrusel-deporte-1.jpg");
 }
 
 .deporte-dos {
-    background-image: url("img/carrusel-deporte-2.jpg");
+    background-image: url("carrusel-deporte-2.jpg");
 }
 
 .deporte-tres {
-    background-image: url("img/carrusel-deporte-3.jpg");
+    background-image: url("carrusel-deporte-3.jpg");
 }
 
 .deporte-cuatro {
-    background-image: url("img/carrusel-deporte-4.jpg");
+    background-image: url("carrusel-deporte-4.jpg");
 }
 
 .deporte-cinco {
-    background-image: url("img/carrusel-deporte-5.jpg");
+    background-image: url("carrusel-deporte-5.jpg");
 }
 
 .deporte-seis {
-    background-image: url("img/carrusel-deporte-6.jpg");
+    background-image: url("carrusel-deporte-6.jpg");
 }
 
 
@@ -516,27 +516,27 @@ a {
 /* IMAGENES DE AMBIENTE */
 
 .ambiente-uno {
-    background-image: url("img/carrusel-ambiente-1.jpg");
+    background-image: url("carrusel-ambiente-1.jpg");
 }
 
 .ambiente-dos {
-    background-image: url("img/carrusel-ambiente-2.jpg");
+    background-image: url("carrusel-ambiente-2.jpg");
 }
 
 .ambiente-tres {
-    background-image: url("img/carrusel-ambiente-3.jpg");
+    background-image: url("carrusel-ambiente-3.jpg");
 }
 
 .ambiente-cuatro {
-    background-image: url("img/carrusel-ambiente-4.jpg");
+    background-image: url("carrusel-ambiente-4.jpg");
 }
 
 .ambiente-cinco {
-    background-image: url("img/carrusel-ambiente-5.jpg");
+    background-image: url("carrusel-ambiente-5.jpg");
 }
 
 .ambiente-seis {
-    background-image: url("img/carrusel-ambiente-6.jpg");
+    background-image: url("carrusel-ambiente-6.jpg");
 }
 
 
