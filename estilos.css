@@ -1,0 +1,859 @@
+
+/* DESPLAZAMIENTO SUAVE */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px;
+}
+
+
+/* CONFIGURACION GENERAL */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    zoom: 0.8;
+    padding-top: 100px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    background-color: #120117;
+    background-image: url("img/FONDO.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* CONTENEDOR GENERAL */
+
+.contenedor {
+    width: 97%;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+
+/* NAVEGACION */
+
+#navegacion {
+    width: 100%;
+    background-color: #150124;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+#navegacion .contenedor {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navegacion .contenedor img {
+    width: 150px;
+    height: auto;
+}
+
+#navegacion ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-size: 19px;
+}
+
+#navegacion a {
+    color: #FFFFFF;
+    transition: 0.4s ease-in-out;
+}
+
+#navegacion a:hover {
+    color: #AE9CD5;
+    font-weight: 900;
+}
+
+
+/* ENCABEZADO */
+
+#encabezado {
+    width: 97%;
+    max-width: 1320px;
+    height: 416px;
+    margin: 0 auto;
+    border-radius: 0 0 243px 0;
+    background-image: url("img/nav.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #FFFFFF;
+}
+
+#encabezado .contenedor {
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    margin: 0;
+    padding-left: 30px;
+    padding-top: 125px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+#encabezado h1 {
+    width: 470px;
+    font-size: 50px;
+    font-weight: 900;
+    letter-spacing: -2px;
+    line-height: 1;
+}
+
+#encabezado h1 span {
+    display: inline-block;
+    position: relative;
+    color: #F6BE01;
+    transition: 0.5s ease-in-out;
+}
+
+/*efecto de CHATGPT*/
+
+#encabezado h1 span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 3px;
+    background-color: #F6BE01;
+    transition: 0.5s ease-in-out;
+}
+
+#encabezado h1 span:hover {
+    transform: translateX(8px);
+    text-shadow: 0 0 12px #F6BE0180;
+}
+
+#encabezado h1 span:hover::after {
+    width: 100%;
+}
+
+/*efecto de CHATGPT*/
+
+#encabezado p {
+    margin-top: 6px;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+#encabezado .cta-boton {
+    display: block;
+    width: 256px;
+    height: 50px;
+    margin: 18px 0 0;
+    border-radius: 50px;
+    background-color: #AE9CD5;
+    color: #411D6B;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 50px;
+    text-align: center;
+    transition: 0.6s ease-in-out;
+}
+
+#encabezado .cta-boton:hover {
+    background-color: #411D6B;
+    color: #AE9CD5;
+    transform: scale(1.04);
+}
+
+
+/* TITULOS DE LAS SECCIONES */
+
+#seleccionados h1,
+#sobre-mi h1,
+#galeria-conciertos h1,
+#galeria-deportes h1,
+#galeria-ambiente h1,
+#equipo h1 {
+    padding-top: 32px;
+    padding-bottom: 22px;
+    margin-bottom: 15px;
+    color: #AE9CD5;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -2px;
+}
+
+
+/* TRABAJOS SELECCIONADOS */
+
+#seleccionados {
+    padding-top: 15px;
+    padding-bottom: 20px;
+    color: #FFFFFF;
+}
+
+#seleccionados .galeria {
+    display: flex;
+    justify-content: space-between;
+    gap: 13px;
+}
+
+#seleccionados .galeria section {
+    width: 32%;
+    height: 266px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.4s ease-in-out;
+}
+
+#seleccionados .galeria section:hover {
+    transform: scale(1.04);
+    filter: brightness(1.1) saturate(1.2);
+    box-shadow: 0 12px 30px #AE9CD550;
+    position: relative;
+    z-index: 1;
+}
+
+#seleccionados .conciertos {
+    background-image: url("img/01-concierto.jpg");
+}
+
+#seleccionados .deportes {
+    background-image: url("img/02-deporte.jpg");
+}
+
+#seleccionados .ambiente {
+    background-image: url("img/03-ambiente.jpg");
+}
+
+#seleccionados .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px 5px;
+}
+
+#seleccionados .info p {
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+#seleccionados .info .cta-boton {
+    width: 102px;
+    height: 29px;
+    border-radius: 20px;
+    background-color: #AE9CD5;
+    color: #411D6B;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 29px;
+    text-align: center;
+    transition: 0.6s ease-in-out;
+}
+
+#seleccionados .info .cta-boton:hover {
+    background-color: #411D6B;
+    color: #AE9CD5;
+}
+
+
+/* SOBRE MI */
+
+#sobre-mi {
+    padding-top: 15px;
+    padding-bottom: 30px;
+    color: #FFFFFF;
+}
+
+#sobre-mi .contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+#sobre-mi .descripcion {
+    width: 44%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 18px;
+}
+
+#sobre-mi .descripcion .rol {
+    color: #F6BE01;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+#sobre-mi .descripcion h2 {
+    color: #AE9CD5;
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+#sobre-mi .descripcion p {
+    color: #FFFFFF;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+#sobre-mi .fotografia {
+    width: 52%;
+    height: 300px;
+    border-radius: 20px;
+    background-image: url("img/sobre-mi.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.6s ease-in-out;
+}
+
+#sobre-mi .fotografia:hover {
+    transform: scale(1.04);
+    filter: brightness(1.1) saturate(1.2);
+    box-shadow: 0 12px 30px #AE9CD550;
+}
+
+
+/* GALERIAS */
+
+#galeria-conciertos,
+#galeria-deportes,
+#galeria-ambiente {
+    padding-top: 15px;
+    padding-bottom: 20px;
+    color: #FFFFFF;
+}
+
+
+/* GALERIA DE CONCIERTOS */
+
+#galeria-conciertos .carrusel-conciertos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px 13px;
+}
+
+#galeria-conciertos .carrusel-conciertos a {
+    display: block;
+    width: 32%;
+    height: 491px;
+    border-radius: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(100%);
+    transition: 0.6s ease-in-out;
+}
+
+#galeria-conciertos .carrusel-conciertos a:hover {
+    filter: grayscale(0%);
+    transform: scale(1.04);
+    position: relative;
+    z-index: 1;
+}
+
+
+/* IMAGENES DE CONCIERTOS */
+
+.concierto-uno {
+    background-image: url("img/carrusel-concierto-1.jpg");
+}
+
+.concierto-dos {
+    background-image: url("img/carrusel-concierto-2.jpg");
+}
+
+.concierto-tres {
+    background-image: url("img/carrusel-concierto-3.jpg");
+}
+
+.concierto-cuatro {
+    background-image: url("img/carrusel-concierto-4.jpg");
+}
+
+.concierto-cinco {
+    background-image: url("img/carrusel-concierto-5.jpg");
+}
+
+.concierto-seis {
+    background-image: url("img/carrusel-concierto-6.jpg");
+}
+
+
+/* GALERIA DE DEPORTES */
+
+#galeria-deportes .carrusel-deportes {
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+#galeria-deportes .pista-deportes {
+    display: flex;
+    width: max-content;
+    animation: movimiento-deportes 35s linear infinite;
+}
+
+#galeria-deportes .grupo-deportes {
+    display: flex;
+    gap: 13px;
+    padding-right: 13px;
+}
+
+#galeria-deportes .grupo-deportes a {
+    display: block;
+    width: 379px;
+    height: 491px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* IMAGENES DE DEPORTES */
+
+.deporte-uno {
+    background-image: url("img/carrusel-deporte-1.jpg");
+}
+
+.deporte-dos {
+    background-image: url("img/carrusel-deporte-2.jpg");
+}
+
+.deporte-tres {
+    background-image: url("img/carrusel-deporte-3.jpg");
+}
+
+.deporte-cuatro {
+    background-image: url("img/carrusel-deporte-4.jpg");
+}
+
+.deporte-cinco {
+    background-image: url("img/carrusel-deporte-5.jpg");
+}
+
+.deporte-seis {
+    background-image: url("img/carrusel-deporte-6.jpg");
+}
+
+
+/* MOVIMIENTO AUTOMATICO */
+
+@keyframes movimiento-deportes {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+
+/* GALERIA DE AMBIENTE */
+
+#galeria-ambiente .carrusel-ambiente {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px 13px;
+}
+
+#galeria-ambiente .carrusel-ambiente a {
+    display: block;
+    width: 32%;
+    height: 491px;
+    border-radius: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(100%);
+    transition: 0.6s ease-in-out;
+}
+
+/* EFECTO HECHO CON IA */
+
+#galeria-ambiente .carrusel-ambiente a:hover {
+    filter: grayscale(0%);
+    transform: scale(1.04);
+    position: relative;
+    z-index: 1;
+}
+
+
+/* IMAGENES DE AMBIENTE */
+
+.ambiente-uno {
+    background-image: url("img/carrusel-ambiente-1.jpg");
+}
+
+.ambiente-dos {
+    background-image: url("img/carrusel-ambiente-2.jpg");
+}
+
+.ambiente-tres {
+    background-image: url("img/carrusel-ambiente-3.jpg");
+}
+
+.ambiente-cuatro {
+    background-image: url("img/carrusel-ambiente-4.jpg");
+}
+
+.ambiente-cinco {
+    background-image: url("img/carrusel-ambiente-5.jpg");
+}
+
+.ambiente-seis {
+    background-image: url("img/carrusel-ambiente-6.jpg");
+}
+
+
+/* MI EQUIPO DE TRABAJO */
+
+#equipo {
+    padding-top: 15px;
+    padding-bottom: 30px;
+    color: #FFFFFF;
+}
+
+#equipo .elementos-equipo {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#equipo .elemento-equipo {
+    width: 19%;
+    height: 228px;
+    flex-shrink: 0;
+    border-radius: 33px;
+    background-color: #db66007e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.4s ease-in-out;
+}
+
+#equipo .elemento-equipo:hover {
+    transform: scale(1.04);
+}
+
+#equipo .imagen-equipo {
+    width: 163px;
+    height: 163px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#equipo .imagen-equipo img {
+    width: 163px;
+}
+
+#equipo .elemento-equipo h2 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#equipo .elemento-equipo p {
+    padding-bottom: 17px;
+    padding-top: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: -1px;
+}
+
+
+/* CONTACTO Y CONTRATACIONES HECHO CON IA */
+
+#contacto {
+    width: 100%;
+    padding-top: 35px;
+    padding-bottom: 40px;
+    color: #FFFFFF;
+}
+
+#contacto .contenido-contacto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+
+/* TEXTO DE CONTACTO */
+
+#contacto .texto-contacto {
+    width: 40%;
+}
+
+#contacto .texto-contacto h1 {
+    color: #AE9CD5;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    line-height: 1.15;
+}
+
+#contacto .texto-contacto h2 {
+    margin-top: 15px;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#contacto .texto-contacto p {
+    margin-top: 8px;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+/* FORMULARIO */
+
+#contacto .formulario-contacto {
+    width: 60%;
+    padding: 20px 24px;
+    border-radius: 18px;
+    background-color: #FFFFFF40;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+#contacto .fila-formulario {
+    display: flex;
+    gap: 10px;
+}
+
+#contacto .fila-formulario input {
+    width: 50%;
+}
+
+#contacto .formulario-contacto input,
+#contacto .formulario-contacto textarea {
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    padding: 10px 13px;
+    background-color: #FFFFFF35;
+    color: #FFFFFF;
+    caret-color: #FFFFFF;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    transition: 0.4s ease-in-out;
+}
+
+#contacto .formulario-contacto input {
+    height: 36px;
+}
+
+#contacto .formulario-contacto textarea {
+    height: 75px;
+    resize: vertical;
+}
+
+#contacto .formulario-contacto input::placeholder,
+#contacto .formulario-contacto textarea::placeholder {
+    color: #FFFFFF;
+    opacity: 0.9;
+}
+
+
+/* INTERACCION DE LOS CAMPOS */
+
+#contacto .formulario-contacto input:hover,
+#contacto .formulario-contacto textarea:hover {
+    background-color: #FFFFFF50;
+    border: 1px solid #AE9CD5;
+}
+
+#contacto .formulario-contacto input:focus,
+#contacto .formulario-contacto textarea:focus {
+    outline: none;
+    color: #FFFFFF;
+    background-color: #51445F;
+    border: 1px solid #AE9CD5;
+    box-shadow: 0 0 10px #AE9CD560;
+}
+
+
+/* FECHA ESTIMADA */
+
+#contacto .formulario-contacto input[type="date"] {
+    min-height: 45px;
+    color: #FFFFFF;
+    color-scheme: dark;
+    cursor: pointer;
+}
+
+#contacto .formulario-contacto input[type="date"]::-webkit-calendar-picker-indicator {
+    width: 27px;
+    height: 27px;
+    padding: 2px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+
+/* BOTON ENVIAR */
+
+#contacto .formulario-contacto button {
+    width: 135px;
+    height: 35px;
+    margin: 2px auto 0;
+    border: none;
+    border-radius: 25px;
+    background-color: #AE9CD5;
+    color: #411D6B;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+#contacto .formulario-contacto button:hover {
+    background-color: #411D6B;
+    color: #AE9CD5;
+    transform: scale(1.06);
+    box-shadow: 0 4px 15px #AE9CD580;
+}
+
+
+/* PIE DE PAGINA */
+
+#pie {
+    width: 100%;
+    margin-top: 60px;
+    background-color: #120117;
+    color: #AE9CD5;
+}
+
+#pie .contenedor {
+    height: 97px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+#pie .redes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#pie .redes a {
+    display: flex;
+    align-items: center;
+}
+
+#pie .redes img {
+    width: 35px;
+    height: 35px;
+}
+
+#pie .derechos-autor {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#pie .firma {
+    display: flex;
+    align-items: center;
+}
+
+#pie .firma img {
+    width: 130px;
+    height: auto;
+}
+
+#pie .firma span {
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+
+/* BOTON VOLVER ARRIBA SOLO EFECTOS HECHO CON IA */
+
+.volver-arriba {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #AE9CD5;
+    border-radius: 50%;
+    background-color: #150124;
+    color: #AE9CD5;
+    text-decoration: none;
+    box-shadow: 0 4px 15px #00000050;
+    transition: 0.4s ease-in-out;
+    z-index: 9999;
+}
+
+.volver-arriba:hover {
+    background-color: #AE9CD5;
+    color: #411D6B;
+    transform: translateY(-7px);
+    box-shadow: 0 8px 20px #AE9CD580;
+}
+
+.volver-arriba span {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 1;
+    position: relative;
+    top: -2px;
+    transition: 0.4s ease-in-out;
+}
+
+.volver-arriba:hover span {
+    transform: translateY(-2px);
+}
